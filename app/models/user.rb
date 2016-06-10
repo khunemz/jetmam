@@ -4,9 +4,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Todo: Assign mass assignment (attr_accesible: )
+  # Todo: Assign mass assignment
+  attr_accessor :room , :building , :lane , :road, :address_number ,
+                :village_number , :subdistrict , :district , :province,
+                :postal , :phone , :card_last_four , :omise_customer_token,
+                :paypal_cutomer_token , :facebook_customer_token ,:twitter_customer_token
   # Todo: add validation to the attributes
-  # Todo: add association to shirt.rb
+  validates_presence_of :address_number , :village_number , :subdistrict,
+                        :district , :province , :postal, :phone
+
   has_many :shirts
 
   protected
