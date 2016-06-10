@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  color: MyString
+  size: MyString
+  neck: MyString
+  amount: 1
+  total: 9.99
+
+two:
+  color: MyString
+  size: MyString
+  neck: MyString
+  amount: 1
+  total: 9.99

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shirts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Size</th>
+      <th>Neck</th>
+      <th>Amount</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shirts.each do |shirt| %>
+      <tr>
+        <td><%= shirt.color %></td>
+        <td><%= shirt.size %></td>
+        <td><%= shirt.neck %></td>
+        <td><%= shirt.amount %></td>
+        <td><%= shirt.total %></td>
+        <td><%= link_to 'Show', shirt %></td>
+        <td><%= link_to 'Edit', edit_shirt_path(shirt) %></td>
+        <td><%= link_to 'Destroy', shirt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shirt', new_shirt_path %>

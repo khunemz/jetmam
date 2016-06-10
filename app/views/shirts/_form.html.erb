@@ -1,0 +1,13 @@
+<%= semantic_form_for @shirt do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :color %>
+    <%= f.input :size %>
+    <%= f.input :neck %>
+    <%= f.input :amount %>
+    <%= f.input :total %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
